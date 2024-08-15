@@ -1,0 +1,22 @@
+def sortnumber():
+   
+    sort_order = input("select it (ascending order/descending order): ").strip()
+
+   
+    numbers = input("enter the number. ex) 1,3,4,6: ").strip().split(',')
+    numbers = [int(num) for num in numbers]
+
+   
+    if sort_order == "ascending order":
+        sort_numbers = sorted(numbers)
+    elif sort_order == "descending order":
+        sort_numbers = sorted(numbers, reverse=True)
+    else:
+        print("wrong input.")
+        return
+
+   
+    print("result:", sort_numbers)
+
+
+sortnumber()
